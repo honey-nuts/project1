@@ -1,18 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>入力フォームの練習｜入力画面</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Bootstrap core JS -->
+  <script src="js/bootstrap.min.js"></script>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <h3>入力画面</h3>
+    </div>
+  </nav>
+  <div class="row" style="padding:80px 0 0 0">
+    <div class="container">
+      <form action="form.py" method="post">
+        <div class="form-group">
+          <label>お名前（姓）</label>
+          <input type="text" name="name1" class="form-control">
+        </div>
+        <div class="form-grou p">
+          <label>お名前（名）</label>
+          <input type="text" name="name2" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>性別</label>
+          <div class="radio">
+            <label><input name="sex" id="sex1" value="1" type="radio">男性</label>
+          </div>
+          <div class="radio">
+            <label><input name="sex" id="sex2" value="2" type="radio">女性</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>都道府県</label>
+          <select class="form-control" name="pref">
+          <option value="1">東京都</option>
+          <option value="2">神奈川県</option>
+          <option value="3">千葉県</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <label>市区町村番地</label>
+          <input type="text" name="address1" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>アパート・マンション名</label>
+          <input type="text" name="address2" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>電話番号</label>
+          <input type="tel" name="tel" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>メールアドレス</label>
+          <input type="email" name="mail1" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>メールアドレス（確認）</label>
+          <input type="email" name="mail2" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>パスワード</label>
+          <input type="password" name="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>好きな食べ物は？</label>
+          <div class="checkbox">
+            <label><input type="checkbox" value="1">りんご</label><br>
+            <label><input type="checkbox" value="2">みかん</label><br>
+            <label><input type="checkbox" value="3">ぶどう</label><br>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">入力内容の確認へ</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">This is Footer</p>
+    </div>
+  </footer>
+</body>
+
 </html>
